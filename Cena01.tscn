@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://3D/Mundo.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/MoveCamera.cs" type="Script" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="Mundo" type="Spatial" parent="."]
+script = ExtResource( 1 )
+tamanhoDoChunk = 10
+altura = 16
+tamamanhoDoMundo = 4
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 20 )
+far = 1000.0
+script = ExtResource( 2 )
+
+[node name="Sol" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 300, 3 )
+shadow_enabled = true
